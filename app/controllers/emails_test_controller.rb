@@ -5,7 +5,7 @@ class EmailsTestController < ApplicationController
       { :from => ENV['FROM_EMAIL_REVIEW'],
         :to => '<test@mortalwombat.net>',
         :subject => 'Test Email',
-        :body => 'This is a test email sent from the EmailsTestController.'
+        :text => 'This is a test email sent from the EmailsTestController.'
       }
     )
     redirect_to courses_path, notice: 'Test email queued successfully.'
