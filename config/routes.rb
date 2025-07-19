@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   get 'companies/sign_in', to: redirect('/')
   get 'admins/sign_in', to: redirect('/')
 
-  get 'send_test_email', to: 'emails_test#send_test' # TESTING ONLY
-
   resources :otp, only: [:new, :create]
 
   devise_for :student, controllers: { invitations: 'invitations', registrations: 'registrations', omniauth_callbacks: 'omniauth_callbacks' }
