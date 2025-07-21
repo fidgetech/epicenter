@@ -7,8 +7,7 @@
         { "url": "heroku/google-chrome" }
       ],
       "addons":[
-        "heroku-postgresql:in-dyno",
-        "heroku-redis:in-dyno"
+        "heroku-postgresql:in-dyno"
       ]
     }
   }

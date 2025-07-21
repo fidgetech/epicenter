@@ -75,7 +75,7 @@ Rails.application.configure do
     Bullet.rails_logger = true
     EmailClient.enable_test_mode
   end
-  config.active_job.queue_adapter = :resque
+  # config.active_job.queue_adapter = :resque
 
   config.hosts << /[a-z0-9-]+\.ngrok\.io/ # allow for testing with ngrok
 end

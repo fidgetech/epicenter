@@ -1,6 +1,4 @@
-class WebhookJob < ApplicationJob
-  queue_as :default
-
+class WebhookJob
   def perform(attributes)
     Webhook.send(attributes)
   end
