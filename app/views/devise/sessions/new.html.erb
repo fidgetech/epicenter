@@ -1,11 +1,3 @@
 <p class='text-center'><%= image_tag "logo.png", id: 'logo' %></p>
-<h1 class='text-center' id='sign-in-page-header'>Welcome to the Epicenter</h1>
-<div class='col-md-8 col-md-offset-2' id='sign-in-box'>
-  <p class='text-center'>
-    <%= link_to user_github_omniauth_authorize_path, method: :post, class: 'btn btn-default', id: 'github-sign-in-button' do %>
-      <i class="fa-brands fa-github"></i> Sign in with GitHub
-    <% end %>
-    <br>or
-  </p>
-  <%= render 'form' %>
-</div>
+<h1 class='text-center' id='sign-in-page-header'>Epicenter</h1>
+<%= render 'form' %>
