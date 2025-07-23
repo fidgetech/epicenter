@@ -91,4 +91,8 @@ protected
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_path, alert: exception.message
   end
+
+  rescue_from ActionController::UnknownFormat do
+    head :not_acceptable
+  end
 end
