@@ -4,7 +4,7 @@ require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'shoulda/matchers'
-require 'capybara/rails'
+# require 'capybara/rails'
 require 'selenium/webdriver'
 require 'cancan/matchers'
 require 'stripe_mock'
@@ -38,18 +38,18 @@ WebMock.enable!
 
 include ActiveSupport::Testing::TimeHelpers
 
-capabilities = Selenium::WebDriver::Chrome::Options.new(
-  args: %w[--headless --no-sandbox --disable-gpu --remote-debugging-port=9222 --disable-dev-shm-usage],
-  binary: ENV.fetch('GOOGLE_CHROME_SHIM', nil),
-)
-Capybara.register_driver :selenium_chrome_headless do |app|
-  Capybara::Selenium::Driver.new(
-    app,
-    browser: :chrome,
-    options: capabilities
-  )
-end
-Capybara.javascript_driver = :selenium_chrome_headless
+# capabilities = Selenium::WebDriver::Chrome::Options.new(
+#   args: %w[--headless --no-sandbox --disable-gpu --remote-debugging-port=9222 --disable-dev-shm-usage],
+#   binary: ENV.fetch('GOOGLE_CHROME_SHIM', nil),
+# )
+# Capybara.register_driver :selenium_chrome_headless do |app|
+#   Capybara::Selenium::Driver.new(
+#     app,
+#     browser: :chrome,
+#     options: capabilities
+#   )
+# end
+# Capybara.javascript_driver = :selenium_chrome_headless
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 

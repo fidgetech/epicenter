@@ -2,9 +2,7 @@
   "environments": {
     "test": {
       "buildpacks": [
-        { "url": "heroku/ruby" },
-        { "url": "https://github.com/heroku/heroku-buildpack-chromedriver" },
-        { "url": "heroku/google-chrome" }
+        { "url": "heroku/ruby" }
       ],
       "addons":[
         "heroku-postgresql:in-dyno"
